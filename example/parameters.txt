@@ -1,0 +1,2 @@
+csvfile	plugins/CSVRemove/example/star.csv
+column	2

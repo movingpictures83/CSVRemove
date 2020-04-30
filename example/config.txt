@@ -1,0 +1,2 @@
+Prefix plugins/CSVRemove/example/
+Plugin CSVRemove inputfile parameters.txt outputfile star.removed.csv
