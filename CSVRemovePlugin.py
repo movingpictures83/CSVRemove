@@ -10,7 +10,8 @@ class CSVRemovePlugin:
       for line in self.txtfile:
          contents = line.split('\t')
          self.parameters[contents[0]] = contents[1].strip()
-
+      if len(PyPluMA.prefix()) != 0:
+         self.parameters['csvfile'] = PyPluMA.prefix() + "/" + self.parameters['csvfile']
    def run(self):
       self.newlines = []
       column = int(self.parameters['column'])

@@ -1,2 +1,2 @@
-csvfile	plugins/CSVRemove/example/star.csv
+csvfile	star.csv
 column	2
