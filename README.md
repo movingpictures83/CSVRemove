@@ -3,6 +3,7 @@
 # Input: TXT (keyword-value pairs)
 # Output: CSV (indexed)
 # Tested with: PluMA 1.0, Python 3.6
+# Dependency: numpy==1.16.0
 
 A PluMA plugin that takes a CSV file and removes a user-specified
 column, creating a new CSV file with the remaining columns.
