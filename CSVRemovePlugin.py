@@ -14,9 +14,18 @@ class CSVRemovePlugin:
          self.parameters['csvfile'] = PyPluMA.prefix() + "/" + self.parameters['csvfile']
    def run(self):
       self.newlines = []
-      column = int(self.parameters['column'])
-      csvfile = open(self.parameters['csvfile'], 'r')
-      for line in csvfile:
+      if ('row' in self.parameters):
+       row = int(self.parameters['row'])
+       csvfile = open(self.parameters['csvfile'], 'r')
+       counter = 1
+       for line in csvfile:
+         if (counter != row):
+           self.newlines.append(line.strip()) 
+         counter += 1
+      else:
+       column = int(self.parameters['column'])
+       csvfile = open(self.parameters['csvfile'], 'r')
+       for line in csvfile:
          line = line.strip()
          contents = line.split(',')
          contents = contents[0:column] + contents[column+1:]
