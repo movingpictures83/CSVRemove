@@ -35,7 +35,7 @@ class CSVRemovePlugin:
             if (j != len(contents)-1):
                newline += ','
          self.newlines.append(newline)
-
+      csvfile.close()
 
    def output(self, filename):
       filestuff2 = open(filename, 'w')
